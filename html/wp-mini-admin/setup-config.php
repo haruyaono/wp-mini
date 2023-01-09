@@ -54,10 +54,15 @@ switch ( $step ) {
         break;
     case 1:
         setup_config_display_header();
-        print $_POST['dbname'];
+        $db_name = $_POST['dbname'];
+        $uname = $_POST['uname'];
+        $pwd = $_POST['pwd'];
+        $dbhost = $_POST['dbhost'];
+    ?>
+<p class="screen-reader-text"><?php echo $db_name; ?></p>
 
+    <?php
 } // End of the steps switch.
-
 ?>
 </body>
 </html>
